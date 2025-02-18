@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <title>Mind Tunes | Dashboard</title>
+  </head>
+
+  <body>
+    <!-- the side menu -->
+    <div class="wrapper">
+      <aside id="sidebar">
+        <div class="d-flex">
+          <button id="toggle-btn" type="button">
+            <!-- icon comes here -->
+            <i class="lni lni-grid-alt"></i>
+          </button>
+          <div class="sidebar-logo">
+            <a href="#" class="text-decoration-none">Mind Tunes</a>
+          </div>
+        </div>
+        <ul class="sidebar-nav">
+          <li class="sidebar-item">
+            <a
+              href="#"
+              class="sidebar-link has-dropdown collapsed text-decoration-none"
+              data-bs-toggle="collapse"
+              data-bs-target="#dashboardSubMenu"
+              aria-expanded="false"
+              area-controls="dashboardSubMenu"
+            >
+              <!-- icon -->
+              <i class="lni lni-dashboard"></i>
+              <span>Home <i class="ps-4 h5 bi bi-chevron-down"></i></span>
+            </a>
+            <ul
+              id="dashboardSubMenu"
+              class="sidebar-dropdown list-unstyled collapse ps-5"
+              data-bs-parent="#sidebar"
+            >
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link text-decoration-none active"
+                  >Dashboard</a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a href="bookingPage.html" class="sidebar-link text-decoration-none"
+                  >Our Courses</a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a href="schedulepage.html" class="sidebar-link text-decoration-none"
+                  >Appointment</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <!-- <li class="sidebar-item">
+            <a href="#" class="sidebar-link text-decoration-none">
+              
+              <i class="lni lni-book"></i>
+              <span>Articles</span>
+            </a>
+          </li> -->
+
+          <!-- <li class="sidebar-item">
+            <a
+              href="#"
+              class="sidebar-link has-dropdown collapsed text-decoration-none"
+              data-bs-toggle="collapse"
+              data-bs-target="#earningSubMenu"
+              aria-expanded="false"
+              area-controls="earningSubMenu"
+            >
+              
+              <i class="lni lni-revenue"></i>
+              <span>Earnings<i class="ps-4 h5 bi bi-chevron-down"></i></span>
+            </a>
+            <ul
+              id="earningSubMenu"
+              class="sidebar-dropdown list-unstyled collapse text-decoration-none ps-5"
+              data-bs-parent="#sidebar"
+            >
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link text-decoration-none">Refund</a>
+              </li>
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link text-decoration-none"
+                  >Payment</a
+                >
+              </li>
+            </ul>
+          </li> -->
+
+          
+
+          <!-- <li class="sidebar-item">
+            <a
+              href="#"
+              class="sidebar-link has-dropdown collapsed text-decoration-none"
+              data-bs-toggle="collapse"
+              data-bs-target="#customerSubMenu"
+              aria-expanded="false"
+              area-controls="customerSubMenu"
+            >
+              
+              <i class="lni lni-user"></i>
+              <span>Customer<i class="ps-4 h5 bi bi-chevron-down"></i></span>
+            </a>
+            <ul
+              id="customerSubMenu"
+              class="sidebar-dropdown list-unstyled collapse ps-5"
+              data-bs-parent="#sidebar"
+            >
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link text-decoration-none"
+                  >Clients</a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link text-decoration-none"
+                  >Services</a
+                >
+              </li>
+            </ul>
+          </li> -->
+
+          
+
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link text-decoration-none">
+              <!-- icon2 -->
+              <i class="lni lni-blogger"></i>
+              <span>Blogs</span>
+            </a>
+          </li>
+
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link text-decoration-none">
+              
+              <i class="lni lni-comments-alt-2"></i>
+              <span>Testimonials</span>
+            </a>
+          </li>
+
+          <!-- <li class="sidebar-item">
+            <a href="#" class="sidebar-link text-decoration-none">
+              
+              <i class="lni lni-consulting"></i>
+              <span>About Us</span>
+            </a>
+          </li> -->
+
+          <!-- <li class="sidebar-item">
+            <a
+              href="#"
+              class="sidebar-link has-dropdown collapsed text-decoration-none"
+              data-bs-toggle="collapse"
+              data-bs-target="#helpSubMenu"
+              aria-expanded="false"
+              area-controls="helpSubMenu"
+            >
+              
+              <i class="lni lni-consulting"></i>
+              <span
+                >Help & Support<i class="ps-4 h5 bi bi-chevron-down"></i
+              ></span>
+            </a>
+            <ul
+              id="helpSubMenu"
+              class="sidebar-dropdown list-unstyled collapse ps-5"
+              data-bs-parent="#sidebar"
+            >
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link text-decoration-none"
+                  >Contacts</a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a href="#" class="sidebar-link text-decoration-none"
+                  >Address</a
+                >
+              </li>
+            </ul>
+          </li> -->
+        </ul>
+        <div class="sidebar-footer">
+          <a href="login.html" class="sidebar-link text-decoration-none">
+            <!-- icon -->
+            <i class="lni lni-exit"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+        
+      </aside>
+
+      <!-- the main section and navbar -->
+      <div class="main">
+        <nav class="navbar navbar-expand px-4 py-3">
+          <!-- <form action="#" class="d-none d-sm-inline-block">
+            <div class="input-group input-group-navbar">
+              <input
+                type="text"
+                class="form-control border-0 rounded-pill pe-5"
+                placeholder="Search"
+              />
+            </div>
+          </form> -->
+          <div class="navbar-collapse collapse">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="bi pe-2 bi-bell h5"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="pe-3 bi bi-chat h5"></i
+                ></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-icon pe-md-0" data-bs-toggle="dropdown">
+                  <img
+                  src="alex-suprun-ZHvM3XIOHoE-unsplash.jpg"
+                  width="30"
+                  height="30"
+                  class="rounded-4"
+                  alt="Profile pic"
+                />
+                <!-- side icon drop down menu -->
+                </a>
+                <div class="dropdown-menu dropdown-menu-end rounded">
+                  <a href="#" class="dropdown-item">
+                    <!-- icon -->
+                    <i class="lni lni-user"></i>
+                    <span>Profile</span>
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    <!-- icon -->
+                    <i class="lni lni-cog"></i>
+                    <span>Settings</span>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#" class="dropdown-item">
+                    <!-- icon -->
+                    <i class="lni lni-question-circle"></i>
+                    <span>About</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- main content -->
+        <main class="content  py-4">
+          <div class="container-fluid">
+            <section class="container">
+              <div class="row">
+                <!-- first column -->
+                <div class="col-md-8">
+                  <div class="custom-col rounded-5 p-4">
+                    <div class="d-flex justify-content-between pb-4">
+                      <p class="h5">Dashboard</p>
+                      <div class="text-end">
+                        <!-- <button
+                          type="button"
+                          class="btn btn-outline-primary rounded-pill btn-sm p-1"
+                        >
+                          This week's
+                        </button> -->
+                      </div>
+                    </div>
+
+                    <div
+                      class="row row-cols-1 row-cols-md-2 custom-color2 p-2 rounded-4"
+                    >
+                      <div class="col">
+                        <div
+                          class="d-flex justify-content-evenly rounded-4 p-3"
+                        >
+                          <i class="bi bi-coin display-6 pe-2 pt-3"></i>
+                          <div class="flex-column">
+                            <p class="h5">Stress</p>
+                            <p class="display-6">33%</p>
+                          </div>
+                          <div class="text ps-2">
+                            <button
+                              type="button"
+                              class="btn btn-outline-primary rounded-pill btn-sm px-2"
+                            >
+                              Stress History
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col p-0">
+                        <div
+                          class="d-flex justify-content-evenly custom-color1 rounded-4 p-3"
+                        >
+                          <i class="bi bi-basket3 display-6 pe-2 pt-3"></i>
+                          <div class="flex-column">
+                            <p class="h5">Sleep</p>
+                            <p class="display-6">7hr 34min</p>
+                          </div>
+                          <div class="text ps-2">
+                            <button
+                              type="button"
+                              class="btn btn-outline-primary rounded-pill btn-sm px-2"
+                            >
+                              Sleep History
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between py-4">
+                      <h5>You can take the test by pressing the following button.</h5>
+                      <div class="text-end ps-2">
+                        <a href="form.html" class="btn btn-outline-primary rounded-pill btn-sm p-1">
+                          Take Test
+                        </a>
+                      </div>
+                    </div>
+                    
+
+                    <div class="d-flex justify-content-evenly ps-1">
+                      <!-- <div class="flex-column ps-1">
+                        <img
+                          src="alex-suprun-ZHvM3XIOHoE-unsplash.jpg"
+                          width="55"
+                          height="55"
+                          class="rounded-4"
+                          alt="Profile pic"
+                        />
+                        <p>Sissi. T</p>
+                      </div>
+                      <div class="flex-column px-1">
+                        <img
+                          src="alex-suprun-ZHvM3XIOHoE-unsplash.jpg"
+                          width="55"
+                          height="55"
+                          class="rounded-4"
+                          alt="Profile pic"
+                        />
+                        <p>Sofia. G</p>
+                      </div>
+                      <div class="flex-column pe-1">
+                        <img
+                          src="alex-suprun-ZHvM3XIOHoE-unsplash.jpg"
+                          width="55"
+                          height="55"
+                          class="rounded-4"
+                          alt="Profile pic"
+                        />
+                        <p>Clara. F</p>
+                      </div>
+                      <div class="flex-column">
+                        <div
+                        class="icons rounded-4 ps-3 me-2 border py-2 border-black"
+                      >
+                        <i class="bi bi-arrow-right fs-3 me-3"></i>
+                      </div>
+                        <p>View All</p>
+                      </div> -->
+                    </div>
+                  </div>
+
+                  <!-- 2nd -->
+                  <div class="custom-col rounded-5 p-4">
+                    <div class="d-flex justify-content-between pb-4">
+                      <p class="h5">Health Charts</p>
+                      <div class="text-end ps-2">
+                        <button
+                          type="button"
+                          class="btn btn-outline-primary rounded-pill btn-sm p-1"
+                        >
+                          6-month <i class="bi bi-chevron-down"></i>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div>
+                      <canvas id="myChart"></canvas>
+                    </div>
+                  </div>
+
+                  <!-- 3rd -->
+                  <div class="custom-col rounded-5 p-3">
+                    <div class="d-flex flex-column pb-4">
+                      <p class="h5">Test History</p>
+                      <p>Previous Test Results</p>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 g-3">
+                      <!-- First row -->
+                       
+                      <div class="col mb-3">
+                        <div class="d-flex align-items-center">
+                          <div
+                            class="icons rounded-4 ps-3 me-2 py-2 border border-black"
+                          >
+                            <i class="bi bi-check-circle fs-3 me-3"></i>
+                          </div>
+                          <div class="flex-column">
+                            <span class="h6">Test 1</span>
+                            <div class="d-flex">
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary rounded-pill btn-sm me-2"
+                              >
+                                Result
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary rounded-pill btn-sm p-1"
+                              >
+                                <img
+                                  src="alex-suprun-ZHvM3XIOHoE-unsplash.jpg"
+                                  alt="profile"
+                                  height="25"
+                                  width="25"
+                                  class="rounded-5"
+                                />
+                                2 min
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Second row -->
+                      <div class="col mb-3">
+                        <div class="d-flex align-items-center">
+                          <div
+                            class="icons rounded-4 ps-3 me-2 py-2 border border-black"
+                          >
+                            <i class="bi bi-check-circle fs-3 me-3"></i>
+                          </div>
+                          <div class="flex-column">
+                            <span class="h6">Test 2</span>
+                            <div class="d-flex">
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary rounded-pill btn-sm me-2"
+                              >
+                                Result
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary rounded-pill btn-sm p-1"
+                              >
+                                <img
+                                  src="alex-suprun-ZHvM3XIOHoE-unsplash.jpg"
+                                  alt="profile"
+                                  height="25"
+                                  width="25"
+                                  class="rounded-5"
+                                />
+                                2 min
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Third row -->
+                      <div class="col mb-3">
+                        <div class="d-flex align-items-center">
+                          <div
+                            class="icons rounded-4 ps-3 me-2 py-2 border border-black"
+                          >
+                            <i class="bi bi-check-circle fs-3 me-3"></i>
+                          </div>
+                          <div class="flex-column">
+                            <span class="h6">Test 3</span>
+                            <div class="d-flex">
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary rounded-pill btn-sm me-2"
+                              >
+                                Result
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary rounded-pill btn-sm p-1"
+                              >
+                                <img
+                                  src="alex-suprun-ZHvM3XIOHoE-unsplash.jpg"
+                                  alt="profile"
+                                  height="25"
+                                  width="25"
+                                  class="rounded-5"
+                                />
+                                2 min
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Fourth row -->
+                      <div class="col mb-3">
+                        <div class="d-flex align-items-center">
+                          <div
+                            class="icons rounded-4 ps-3 me-2 py-2 border border-black"
+                          >
+                            <i class="bi bi-check-circle fs-3 me-3"></i>
+                          </div>
+                          <div class="flex-column">
+                            <span class="h6">Test 4</span>
+                            <div class="d-flex">
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary rounded-pill btn-sm me-2"
+                              >
+                                Result
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary rounded-pill btn-sm p-1"
+                              >
+                                <img
+                                  src="alex-suprun-ZHvM3XIOHoE-unsplash.jpg"
+                                  alt="profile"
+                                  height="25"
+                                  width="25"
+                                  class="rounded-5"
+                                />
+                                2 min
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Fifth row -->
+                      <div class="col mb-3">
+                        <div class="d-flex align-items-center">
+                          <div
+                            class="icons rounded-4 ps-3 me-2 py-2 border border-black"
+                          >
+                            <i class="bi bi-check-circle fs-3 me-3"></i>
+                          </div>
+                          <div class="flex-column">
+                            <span class="h6">Test 5</span>
+                            <div class="d-flex">
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary rounded-pill btn-sm me-2"
+                              >
+                                Result
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary rounded-pill btn-sm p-1"
+                              >
+                                <img
+                                  src="alex-suprun-ZHvM3XIOHoE-unsplash.jpg"
+                                  alt="profile"
+                                  height="25"
+                                  width="25"
+                                  class="rounded-5"
+                                />
+                                2 min
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Sixth row -->
+                      <div class="col mb-3">
+                        <div class="d-flex align-items-center">
+                          <div
+                            class="icons rounded-4 ps-3 me-2 py-2 border border-black"
+                          >
+                            <i class="bi bi-check-circle fs-3 me-3"></i>
+                          </div>
+                          <div class="flex-column">
+                            <span class="h6">Test 6</span>
+                            <div class="d-flex">
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary rounded-pill btn-sm me-2"
+                              >
+                                Result
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-outline-primary rounded-pill btn-sm p-1"
+                              >
+                                <img
+                                  src="alex-suprun-ZHvM3XIOHoE-unsplash.jpg"
+                                  alt="profile"
+                                  height="25"
+                                  width="25"
+                                  class="rounded-5"
+                                />
+                                2 min
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 4th -->
+                  <div class="custom-col rounded-5 p-4">
+                    <div class="d-flex flex-column pb-4">
+                        <p class="h5">Promote your health</p>
+                        <p>Learn how to improve your mental health with these simple tips.</p>
+                    </div>
+
+                    <div class="d-flex justify-content-evenly ">
+                      <div class="button1">  
+                        <button
+                        type="button"
+                        class="btn btn-outline-primary rounded-pill btn-sm px-3"
+                      >
+                        Tips
+                      </button></div>
+
+                    <div class="button2 px-1">  
+                        <button
+                        type="button"
+                        class="btn btn-outline-primary rounded-pill btn-sm px-3"
+                      >
+                        Yoga Aasanas
+                      </button></div>
+
+                   <div class="button3"> 
+                    <button
+                    type="button"
+                    class="btn btn-outline-primary rounded-pill btn-sm px-3"
+                  >
+                    Meditation Techniques
+                  </button></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- second column -->
+                <!-- 1st -->
+                <div class="col-md-4">
+                  <div class="custom-col rounded-5 p-4">
+                    <h5 class="pb-3">Therepists Available</h5>
+                    <div class="d-flex justify-content-evenly border-bottom">
+                      <div class="pe-4">
+                        <img
+                          src="alex-suprun-ZHvM3XIOHoE-unsplash.jpg"
+                          width="60"
+                          height="60"
+                          class="rounded-5"
+                          alt="Profile pic"
+                        />
+                      </div>
+                      <div class="flex-column">
+                        <p class="h5">Mayank Seth</p>
+                        <p>Best in Class</p>
+                        <p>Good experience and highly rated.</p>
+                      </div>
+                      
+                      
+                    </div>
+
+                    <div
+                      class="d-flex justify-content-evenly pt-4 border-bottom"
+                    >
+                      <div class="pe-4">
+                        <img
+                          src="alex-suprun-ZHvM3XIOHoE-unsplash.jpg"
+                          width="60"
+                          height="60"
+                          class="rounded-5"
+                          alt="Profile pic"
+                        />
+                      </div>
+                      <div class="flex-column">
+                        <p class="h5">Manan Seth</p>
+                        <p>Best in Class</p>
+                        <p>Good experience and highly rated.</p>
+                      </div>
+                      
+                    </div>
+
+                    <div class="d-flex justify-content-evenly pt-4 pb-4">
+                      <div class="pe-4">
+                        <img
+                          src="alex-suprun-ZHvM3XIOHoE-unsplash.jpg"
+                          width="60"
+                          height="60"
+                          class="rounded-5"
+                          alt="Profile pic"
+                        />
+                      </div>
+                      <div class="flex-column">
+                        <p class="h5">Divyansh Jain</p>
+                        <p>Best in Class</p>
+                        <p>Good experience and highly rated.</p>
+                      </div>
+                      
+                    </div>
+
+                    <div class="text-center">
+                      <button
+                        type="button"
+                        class="btn btn-outline-primary rounded-pill px-5"
+                      >
+                        View All
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- 2nd -->
+                  <!-- <div class="custom-col rounded-5 p-4">
+                    <h5 class="pb-3">Upcoming Gigs</h5>
+                    <div class="d-flex justify-content-between border-bottom">
+                      <p>Gig</p>
+                      <p>Bookings</p>
+                    </div>
+
+                    <div class="d-flex justify-content-between pt-2">
+                      <div class="pe-4">
+                        <img
+                          src="alex-suprun-ZHvM3XIOHoE-unsplash.jpg"
+                          width="65"
+                          height="65"
+                          class="rounded-4"
+                          alt="Profile pic"
+                        />
+                      </div>
+                      <div class="flex-column"><p>Gig - 3600</p></div>
+                      <div class="flex-column">
+                        <p>$ 199.99</p>
+                        <button
+                          type="button"
+                          class="btn btn-outline-primary rounded-pill"
+                        >
+                          Book
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between pt-2">
+                      <div class="pe-4">
+                        <img
+                          src="alex-suprun-ZHvM3XIOHoE-unsplash.jpg"
+                          width="65"
+                          height="65"
+                          class="rounded-4"
+                          alt="Profile pic"
+                        />
+                      </div>
+                      <div class="flex-column"><p>Gig - 3600</p></div>
+                      <div class="flex-column">
+                        <p>$ 199.99</p>
+                        <button
+                          type="button"
+                          class="btn btn-outline-primary rounded-pill"
+                        >
+                          Book
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between pt-2">
+                      <div class="pe-4">
+                        <img
+                          src="alex-suprun-ZHvM3XIOHoE-unsplash.jpg"
+                          width="65"
+                          height="65"
+                          class="rounded-4"
+                          alt="Profile pic"
+                        />
+                      </div>
+                      <div class="flex-column"><p>Gig - 3600</p></div>
+                      <div class="flex-column">
+                        <p>$ 199.99</p>
+                        <button
+                          type="button"
+                          class="btn btn-outline-primary rounded-pill"
+                        >
+                          Book
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between pt-2">
+                      <div class="pe-4">
+                        <img
+                          src="alex-suprun-ZHvM3XIOHoE-unsplash.jpg"
+                          width="65"
+                          height="65"
+                          class="rounded-4"
+                          alt="Profile pic"
+                        />
+                      </div>
+                      <div class="flex-column"><p>Gig - 3600</p></div>
+                      <div class="flex-column">
+                        <p>$ 199.99</p>
+                        <button
+                          type="button"
+                          class="btn btn-outline-primary rounded-pill"
+                        >
+                          Book
+                        </button>
+                      </div>
+                    </div>
+                  </div> -->
+
+                  <!-- 3rd -->
+                  <!-- <div class="custom-col rounded-5 d-flex flex-column p-3">
+                    <h5 class="pb-2">Bookings</h5>
+                    <div class="d-flex align-items-center">
+                      <div
+                      class="icons rounded-4 ps-3 me-2 border py-2 border-black"
+                    >
+                      <i class="bi bi-cart4 fs-3 me-3"></i>
+                    </div>
+                      <p>
+                        You have 52 open bookings to manage this include 8 new.
+                      </p>
+                    </div>
+                    <div class="text-center">
+                      <button
+                        type="button"
+                        class="btn btn-outline-primary rounded-pill px-4"
+                      >
+                        View All
+                      </button>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row text-body-secondary">
+              <div class="col-6 text-start">
+                <a href="#" class="text-body-secondary text-decoration-none">
+                  <strong>Mind Tunes</strong>
+                </a>
+              </div>
+              <div class="text-end col-6 text-body-secondary d-none d-md-block">
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <a href="#" class="text-body-secondary text-decoration-none"
+                      >Contacts</a
+                    >
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="text-body-secondary text-decoration-none"
+                      >About us</a
+                    >
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="text-body-secondary text-decoration-none"
+                      >Terms & Conditions</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
